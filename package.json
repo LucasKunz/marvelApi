@@ -5,6 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.js",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node -r dotenv/config ./dist/index.js",
     "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
